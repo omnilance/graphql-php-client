@@ -1,0 +1,23 @@
+{
+  "name": "omnilance/graphql-php-client",
+  "description": "A simple client to help execute queries and mutations across GraphQL",
+  "keywords": ["graphql", "client", "php"],
+  "license": "BSD-3-clause",
+  "type": "library",
+  "require-dev": {
+    "phpunit/phpunit": "~5.0",
+    "mockery/mockery": "~0.9"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Omnilance\\GraphQL\\": "src/"
+    }
+  },
+  "autoload-dev":{
+    "psr-4":{
+      "Tests\\": "tests/"
+    }
+  }
+}
