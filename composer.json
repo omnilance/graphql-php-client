@@ -8,7 +8,6 @@
     "phpunit/phpunit": "~5.0",
     "mockery/mockery": "~0.9"
   },
-  "prefer-stable": true,
   "autoload": {
     "psr-4": {
       "Omnilance\\GraphQL\\": "src/"
