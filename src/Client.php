@@ -68,7 +68,10 @@ class Client
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['query' => $query, 'variables' => $variables]));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array_merge($headers, ['X-Token' => $this->token]));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array_merge($headers, [
+            "X-Token : {$this->token}",
+            "Content-Type: application/json;charset=utf-8"
+        ]));
         $output = curl_exec($ch);
 
         curl_close($ch);
