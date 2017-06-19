@@ -100,7 +100,7 @@ class Client
 
         if ($responseJson === null) {
             throw new GraphQLInvalidResponse('GraphQL did not provide a valid JSON response. Please make sure you are pointing at the correct URL.');
-        } else if (!isset($responseJson->data)) {
+        } else if (!isset($responseJson->data) && $responseJson->data != null) {
             throw new GraphQLMissingData('There was an error with the GraphQL response, no data key was found.');
         }
 
